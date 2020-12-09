@@ -2,22 +2,23 @@ import './App.css'
 import Movie from './Movie'
 
 function App() {
-    const firstMovie = {
-        title: 'The Fellowship of the Ring',
-        hours: 2,
-        minutes: 58
-    }
-    const secondMovie = {
-        title: 'The Two Towers',
-        hours: 2,
-        minutes: 59
-    }
-    const thirdMovie = {
-        title: 'The Return of the King',
-        hours: 3,
-        minutes: 21
-    }
-    const movieData = [firstMovie, secondMovie, thirdMovie]
+    const movieData = [
+        {
+            title: 'The Fellowship of the Ring',
+            hours: 2,
+            minutes: 58
+        },
+        {
+            title: 'The Two Towers',
+            hours: 2,
+            minutes: 59
+        },
+        {
+            title: 'The Return of the King',
+            hours: 3,
+            minutes: 21
+        }
+    ]
     const movieComponents = movieData.map((movie, index) => {
         return <Movie { ...movie } key={`index-${index}`} />
     })
