@@ -29,7 +29,7 @@ function App() {
                 {movieComponents}
             </header>
         </div>
-  )
+    )
 }
 
 export default App
