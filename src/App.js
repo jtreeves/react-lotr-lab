@@ -16,26 +16,21 @@ function App() {
         title: 'The Return of the King',
         hours: 3,
         minutes: 21
-    }  
+    }
+    const movieData = [firstMovie, secondMovie, thirdMovie]
+    const movieComponents = movieData.map((movie, index) => {
+        return <Movie 
+            title={movie.title}
+            hours={movie.hours}
+            minutes={movie.minutes}
+            key={`index-${index}`}
+        />
+    })
 
     return (
         <div className="App">
             <header className="App-header">
-                <Movie
-                    title={firstMovie.title}
-                    hours={firstMovie.hours}
-                    minutes={firstMovie.minutes}
-                />
-                <Movie
-                    title={secondMovie.title}
-                    hours={secondMovie.hours}
-                    minutes={secondMovie.minutes}
-                />
-                <Movie
-                    title={thirdMovie.title}
-                    hours={thirdMovie.hours}
-                    minutes={thirdMovie.minutes}
-                />
+                {movieComponents}
             </header>
         </div>
   )
