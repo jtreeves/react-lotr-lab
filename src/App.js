@@ -19,12 +19,7 @@ function App() {
     }
     const movieData = [firstMovie, secondMovie, thirdMovie]
     const movieComponents = movieData.map((movie, index) => {
-        return <Movie 
-            title={movie.title}
-            hours={movie.hours}
-            minutes={movie.minutes}
-            key={`index-${index}`}
-        />
+        return <Movie { ...movie } key={`index-${index}`} />
     })
 
     return (
